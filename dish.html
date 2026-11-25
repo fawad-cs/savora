@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dish — SAVORA</title>
+<meta name="description" content="Explore a Savora dish in interactive 3D: ingredients, preparation story and related dishes.">
+<meta name="theme-color" content="#0d0b09">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0b09'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-size='38' text-anchor='middle' fill='%23d4b47c'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Manrope:wght@300..700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dish.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script type="module" src="js/dish.js"></script>
+</head>
+<body data-page="dish">
+<div id="layout-top"></div>
+<main id="main">
+  <article class="dish-page" id="dish-page" aria-labelledby="dish-name">
+    <div class="wrap dish-hero">
+      <div class="dish-stage" data-reveal="fade">
+        <div class="dish-viewer" id="dish-viewer" tabindex="0" aria-label="Interactive 3D model of the dish. Drag to rotate, scroll to zoom.">
+          <div class="viewer-loading"><div class="spinner"></div><span>Loading 3D model</span></div>
+        </div>
+        <span class="frame-tag">Real-time 3D model · drag to rotate · scroll to zoom</span>
+        <div class="dish-stage__controls" role="toolbar" aria-label="3D viewer controls">
+          <div class="seg" role="group" aria-label="Camera view">
+            <button type="button" data-view="front" aria-pressed="false">Front</button>
+            <button type="button" data-view="side" aria-pressed="false">Side</button>
+            <button type="button" data-view="top" aria-pressed="false">Top</button>
+            <button type="button" data-view="threeQuarter" aria-pressed="true">¾</button>
+          </div>
+          <div class="dish-stage__tools">
+            <button class="icon-btn" type="button" data-act="out" aria-label="Zoom out"><i data-lucide="minus"></i></button>
+            <button class="icon-btn" type="button" data-act="in" aria-label="Zoom in"><i data-lucide="plus"></i></button>
+            <button class="icon-btn" type="button" data-act="layers" aria-pressed="false" aria-label="Reveal ingredient layers"><i data-lucide="layers"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="dish-info">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="menu.html">Menu</a><span aria-hidden="true">/</span><a id="crumb-cat" href="menu.html"></a></nav>
+        <p class="kicker" id="dish-cat"></p>
+        <h1 class="h1" id="dish-name">Loading…</h1>
+        <p class="price dish-price" id="dish-price"></p>
+        <p class="lede" id="dish-desc"></p>
+        <div class="tags" id="dish-tags"></div>
+        <div class="dish-actions">
+          <a class="btn btn--solid" href="reservations.html">Reserve a Table <i data-lucide="arrow-right"></i></a>
+          <a class="btn" href="menu.html" id="back-menu"><i data-lucide="arrow-left"></i> Back to menu</a>
+        </div>
+        <p class="demo-note">Demonstration menu price.</p>
+      </div>
+    </div>
+
+    <section class="section--tight wrap dish-detail">
+      <div>
+        <h2 class="h3 dish-sub">Ingredients</h2>
+        <ul class="ing-list" id="dish-ing"></ul>
+      </div>
+      <div>
+        <h2 class="h3 dish-sub">The preparation</h2>
+        <blockquote class="dish-story" id="dish-story"></blockquote>
+        <h2 class="h3 dish-sub">Layers in the 3D model</h2>
+        <ol class="model-layers" id="dish-layers"></ol>
+      </div>
+    </section>
+  </article>
+
+  <section class="dish-missing wrap section" id="dish-missing" hidden>
+    <h1 class="h1">We couldn't find that dish.</h1>
+    <p class="lede">It may have left the menu. Browse tonight's carte instead.</p>
+    <a class="btn btn--solid" href="menu.html">Open the menu <i data-lucide="arrow-right"></i></a>
+  </section>
+
+  <section class="section related" aria-labelledby="rel-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2" id="rel-title">You may also enjoy</h2>
+        <a class="link-arrow" href="menu.html">All dishes <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="dish-grid" id="related"></div>
+    </div>
+  </section>
+</main>
+
+<div id="layout-bottom"></div>
+</body>
+</html>

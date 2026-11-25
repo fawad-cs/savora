@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reservations — SAVORA</title>
+<meta name="description" content="Request a table at Savora.">
+<meta name="theme-color" content="#0d0b09">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0b09'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-size='38' text-anchor='middle' fill='%23d4b47c'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Manrope:wght@300..700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms-pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script type="module" src="js/reservations.js"></script>
+</head>
+<body data-page="reservations">
+<div id="layout-top"></div>
+<main id="main">
+  <section class="page-hero res-hero" data-page-hero aria-labelledby="res-title">
+    <div class="wrap page-hero__grid">
+      <div>
+        <p class="kicker" data-hero-pre>Reservations</p>
+        <h1 class="display" id="res-title" data-hero-title>Reserve your table.</h1>
+      </div>
+      <p class="lede" data-hero-post>Tables are released thirty days ahead. For parties of nine or more, or the Oak Room, choose “9+ guests” and we will help you plan.</p>
+    </div>
+  </section>
+
+  <section class="section--tight res-section">
+    <div class="wrap res-grid">
+      <div class="res-form-wrap">
+        <form class="form" id="res-form" novalidate aria-describedby="res-note">
+          <div class="form-row">
+            <div class="field">
+              <label for="r-name">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="r-name" name="name" autocomplete="name" required aria-describedby="r-name-err">
+              <p class="field-error" id="r-name-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="r-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="r-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="r-email-err">
+              <p class="field-error" id="r-email-err" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="r-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="r-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+1 555 014 2200" required aria-describedby="r-phone-err">
+              <p class="field-error" id="r-phone-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="r-guests">Number of guests <span class="req" aria-hidden="true">*</span></label>
+              <select class="select" id="r-guests" name="guests" required aria-describedby="r-guests-err r-guests-hint"></select>
+              <p class="field-hint" id="r-guests-hint"></p>
+              <p class="field-error" id="r-guests-err" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="r-date">Date <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="r-date" name="date" type="date" required aria-describedby="r-date-hint r-date-err">
+              <p class="field-hint" id="r-date-hint">Closed Mondays · Sunday is lunch only</p>
+              <p class="field-error" id="r-date-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="r-time">Time <span class="req" aria-hidden="true">*</span></label>
+              <select class="select" id="r-time" name="time" required disabled aria-describedby="r-time-err"><option value="">Choose a date first</option></select>
+              <p class="field-error" id="r-time-err" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="r-occasion">Occasion</label>
+            <select class="select" id="r-occasion" name="occasion">
+              <option value="">No special occasion</option>
+              <option>Birthday</option><option>Anniversary</option><option>Business dinner</option><option>Proposal</option><option value="Private dining enquiry">Private dining (Oak Room)</option><option value="Chef's table">Chef's table</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="r-notes">Special requests</label>
+            <textarea class="textarea" id="r-notes" name="notes" maxlength="500" placeholder="Allergies, dietary needs, accessibility, a table by the hearth…" aria-describedby="r-notes-count"></textarea>
+            <p class="field-hint" id="r-notes-count">0 / 500</p>
+          </div>
+          <div class="res-submit">
+            <button class="btn btn--solid" type="submit">Request this table <i data-lucide="arrow-right"></i></button>
+            <p class="form-note" id="res-note">Fields marked * are required. This demonstration site is not connected to a booking system — submitting prepares your request but does not reserve a table.</p>
+          </div>
+        </form>
+        <div class="notice res-done" id="res-done" hidden tabindex="-1" aria-live="polite">
+          <h2 class="h3">Your request is ready — not yet booked</h2>
+          <p>This website is a demonstration with no reservation system connected, so <strong>no table has been reserved and nothing has been sent</strong>. To book, call <span style="white-space:nowrap">+1 (555) 014-2200</span> or email table@savora.example with these details:</p>
+          <dl id="res-summary"></dl>
+          <div class="actions">
+            <button class="btn btn--sm btn--gold" type="button" id="res-copy"><i data-lucide="copy"></i> Copy details</button>
+            <button class="btn btn--sm" type="button" id="res-edit">Edit request</button>
+            <button class="btn btn--sm" type="button" id="res-new">Start over</button>
+          </div>
+          <p class="form-note" id="res-copy-msg" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <aside class="res-aside" aria-label="Opening hours and policies">
+        <figure class="frame res-art" data-art="private" data-alt="Illustration of a set table by candlelight"></figure>
+        <div class="res-aside__block">
+          <h2 class="h3">Opening hours</h2>
+          <div id="res-hours"></div>
+        </div>
+        <div class="res-aside__block">
+          <h2 class="h3">Good to know</h2>
+          <ul class="res-policy">
+            <li><i data-lucide="clock"></i>We hold tables for fifteen minutes.</li>
+            <li><i data-lucide="users"></i>Parties of nine or more dine in the Oak Room.</li>
+            <li><i data-lucide="leaf"></i>Tell us about allergies when you book.</li>
+            <li><i data-lucide="accessibility"></i>Step-free access throughout the dining room.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<div id="layout-bottom"></div>
+</body>
+</html>

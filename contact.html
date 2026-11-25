@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — SAVORA</title>
+<meta name="description" content="Contact Savora: address, phone, opening hours and a message form.">
+<meta name="theme-color" content="#0d0b09">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0b09'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-size='38' text-anchor='middle' fill='%23d4b47c'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Manrope:wght@300..700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms-pages.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script type="module" src="js/contact.js"></script>
+</head>
+<body data-page="contact">
+<div id="layout-top"></div>
+<main id="main">
+  <section class="page-hero" data-page-hero aria-labelledby="c-title">
+    <div class="wrap page-hero__grid">
+      <div>
+        <p class="kicker" data-hero-pre>Contact</p>
+        <h1 class="display" id="c-title" data-hero-title>Come and find us.</h1>
+      </div>
+      <p class="lede" data-hero-post>Questions about the menu, private dining, press or careers — we read every message. For tonight's table, calling is quickest.</p>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap contact-cards">
+      <article class="c-card" data-reveal><i data-lucide="map-pin"></i><h2 class="h3">Address</h2><address>18 Ember Lane, Old Town<br>Sample City 10001</address><p class="demo-note">Sample address for demonstration</p></article>
+      <article class="c-card" data-reveal><i data-lucide="phone"></i><h2 class="h3">Phone</h2><p><a href="tel:+15550142200">+1 (555) 014-2200</a></p><p class="demo-note">Sample number · Tue–Sun from 11:00</p></article>
+      <article class="c-card" data-reveal><i data-lucide="mail"></i><h2 class="h3">Email</h2><p><a href="mailto:table@savora.example">table@savora.example</a></p><p class="demo-note">Sample address · replies within a day</p></article>
+      <article class="c-card" data-reveal><i data-lucide="clock"></i><h2 class="h3">Opening hours</h2><div id="c-hours"></div></article>
+    </div>
+  </section>
+
+  <section class="section contact-main">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="kicker" data-reveal>Write to us</p>
+        <h2 class="h1" data-split>Send a message.</h2>
+        <form class="form contact-form" id="c-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="c-name">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="c-name" name="name" autocomplete="name" required aria-describedby="c-name-err">
+              <p class="field-error" id="c-name-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="c-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="c-email-err">
+              <p class="field-error" id="c-email-err" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-subject">Subject <span class="req" aria-hidden="true">*</span></label>
+            <select class="select" id="c-subject" name="subject" required aria-describedby="c-subject-err">
+              <option value="">Choose a subject</option>
+              <option>General question</option><option>Private dining</option><option>Events &amp; occasions</option><option>Press</option><option>Careers</option><option>Feedback</option>
+            </select>
+            <p class="field-error" id="c-subject-err" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="c-msg">Message <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="textarea" id="c-msg" name="message" maxlength="1000" required aria-describedby="c-msg-count c-msg-err"></textarea>
+            <p class="field-hint" id="c-msg-count">0 / 1000</p>
+            <p class="field-error" id="c-msg-err" aria-live="polite"></p>
+          </div>
+          <div class="res-submit">
+            <button class="btn btn--solid" type="submit">Prepare message <i data-lucide="arrow-right"></i></button>
+            <p class="form-note">No email service is connected to this demonstration site, so your message will not be sent. We'll show it ready to copy into your own email.</p>
+          </div>
+        </form>
+        <div class="notice" id="c-done" hidden tabindex="-1" aria-live="polite">
+          <h2 class="h3">Your message is ready — not sent</h2>
+          <p>This demonstration website has no email service connected, so <strong>nothing has been sent</strong>. Copy your message below and email it to table@savora.example.</p>
+          <dl id="c-summary"></dl>
+          <div class="actions">
+            <button class="btn btn--sm btn--gold" type="button" id="c-copy"><i data-lucide="copy"></i> Copy message</button>
+            <button class="btn btn--sm" type="button" id="c-edit">Edit</button>
+            <button class="btn btn--sm" type="button" id="c-new">Write another</button>
+          </div>
+          <p class="form-note" id="c-copy-msg" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="map-wrap">
+        <figure class="map" aria-labelledby="map-cap">
+          <svg viewBox="0 0 600 640" role="img" aria-label="Stylised map of the sample location on Ember Lane, Old Town">
+            <rect width="600" height="640" fill="#14110e"/>
+            <g stroke="#2a231c" stroke-width="2" fill="#1a1612">
+              <rect x="20" y="20" width="160" height="120"/><rect x="220" y="20" width="180" height="120"/><rect x="440" y="20" width="140" height="120"/>
+              <rect x="20" y="180" width="160" height="160"/><rect x="440" y="180" width="140" height="160"/>
+              <rect x="20" y="380" width="160" height="110"/><rect x="220" y="380" width="180" height="110"/><rect x="440" y="380" width="140" height="110"/>
+              <rect x="20" y="530" width="160" height="90"/><rect x="220" y="530" width="180" height="90"/><rect x="440" y="530" width="140" height="90"/>
+            </g>
+            <rect x="220" y="180" width="180" height="160" fill="#1f2a1a" stroke="#2a231c" stroke-width="2"/>
+            <g fill="#2e3d24"><circle cx="260" cy="220" r="14"/><circle cx="350" cy="230" r="18"/><circle cx="300" cy="300" r="16"/><circle cx="370" cy="310" r="10"/></g>
+            <path d="M0 360 C150 350 300 372 600 356" stroke="#3a2e24" stroke-width="22" fill="none"/>
+            <path d="M0 360 C150 350 300 372 600 356" stroke="#b8945a" stroke-opacity=".25" stroke-width="1" stroke-dasharray="8 8" fill="none"/>
+            <path d="M200 0 V640 M420 0 V640" stroke="#2a221b" stroke-width="18"/>
+            <path d="M0 160 H600 M0 510 H600" stroke="#241d17" stroke-width="12"/>
+            <path d="M0 470 C200 430 380 600 600 560" stroke="#1e2a33" stroke-width="30" fill="none" opacity=".9"/>
+            <text x="300" y="262" fill="#6f8a5a" font-family="Georgia" font-style="italic" font-size="15" text-anchor="middle">Lantern Gardens</text>
+            <text x="40" y="346" fill="#a89d8c" font-family="Arial" font-size="13">EMBER LANE</text>
+            <text x="190" y="600" fill="#a89d8c" font-family="Arial" font-size="12" transform="rotate(-90 190 600)">MARKET ST</text>
+            <text x="120" y="455" fill="#5a7488" font-family="Georgia" font-style="italic" font-size="14">River Walk</text>
+            <g class="map-pin" transform="translate(470 352)">
+              <circle r="40" fill="#c8582a" opacity=".18"><animate attributeName="r" values="18;46;18" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".35;0;.35" dur="3s" repeatCount="indefinite"/></circle>
+              <path d="M0 0 C-14 -20 -18 -28 -18 -36 A18 18 0 0 1 18 -36 C18 -28 14 -20 0 0Z" fill="#c8582a"/>
+              <circle cy="-36" r="6.5" fill="#f3ece0"/>
+              <rect x="-62" y="-84" width="124" height="28" fill="#0d0b09" stroke="#b8945a" stroke-opacity=".6"/>
+              <text y="-65" fill="#f3ece0" font-family="Georgia" font-size="15" letter-spacing="4" text-anchor="middle">SAVORA</text>
+            </g>
+          </svg>
+          <figcaption id="map-cap"><strong>Sample location</strong> — illustrative map for demonstration. Replace with your real address and an embedded map.</figcaption>
+        </figure>
+        <div class="map-notes">
+          <p><i data-lucide="train-front"></i>Five minutes' walk from Old Town station (sample).</p>
+          <p><i data-lucide="car"></i>Evening parking on Market Street (sample).</p>
+        </div>
+        <div class="c-social">
+          <h2 class="h3">Follow along</h2>
+          <div class="socials">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram (opens a new tab)"><i data-lucide="instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook (opens a new tab)"><i data-lucide="facebook"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube (opens a new tab)"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="layout-bottom"></div>
+</body>
+</html>

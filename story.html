@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Story — SAVORA</title>
+<meta name="description" content="How Savora began: twelve seats around a wood oven, a fire-led philosophy, our producers, kitchen and chef.">
+<meta name="theme-color" content="#0d0b09">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0b09'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-size='38' text-anchor='middle' fill='%23d4b47c'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Manrope:wght@300..700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/story.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script type="module" src="js/story.js"></script>
+</head>
+<body data-page="story">
+<div id="layout-top"></div>
+<main id="main">
+  <section class="page-hero" data-page-hero aria-labelledby="story-title">
+    <div class="wrap">
+      <div class="page-hero__grid">
+        <div>
+          <p class="kicker" data-hero-pre>Our Story</p>
+          <h1 class="display" id="story-title" data-hero-title>Built around a fire.</h1>
+        </div>
+        <p class="lede" data-hero-post>Savora began in 2009 as twelve seats around a wood oven in a former bookbinder's workshop. The fire is still the centre of everything we do.</p>
+      </div>
+      <figure class="frame page-hero__media" data-hero-media data-art="dining" data-alt="Illustration of the Savora dining room at night"></figure>
+    </div>
+  </section>
+
+  <!-- Our beginning -->
+  <section class="section story-begin" aria-labelledby="begin-title">
+    <div class="wrap story-split">
+      <div class="story-year" aria-hidden="true" data-parallax="0.25">2009</div>
+      <div>
+        <p class="kicker" data-reveal>Our Beginning</p>
+        <h2 class="h1" id="begin-title" data-split>Twelve seats and one oven.</h2>
+        <div class="story-cols" data-reveal>
+          <p>The first Savora had no menu. Guests were served whatever came out of the oven that night — slow-roasted shoulders, blistered flatbreads, fruit baked in the embers. Word travelled, and within a year there was a waiting list longer than the room.</p>
+          <p>We moved to Ember Lane in 2014, keeping the original oven bricks and setting them into the new hearth. Today the dining room seats forty-two, but the idea is the same: cook simply over real fire, and give people a reason to linger.</p>
+        </div>
+      </div>
+    </div>
+    <ol class="timeline wrap" aria-label="Milestones">
+      <li data-reveal><span>2009</span><p>Twelve seats open around a single wood oven.</p></li>
+      <li data-reveal><span>2014</span><p>The move to Ember Lane and the open oak hearth.</p></li>
+      <li data-reveal><span>2018</span><p>Our salt-lined ageing room is built beneath the kitchen.</p></li>
+      <li data-reveal><span>2023</span><p>The chef's table opens: eight seats at the pass.</p></li>
+    </ol>
+  </section>
+
+  <!-- Culinary philosophy -->
+  <section class="section story-philo" aria-labelledby="cp-title">
+    <div class="wrap">
+      <p class="kicker" data-reveal>Culinary Philosophy</p>
+      <h2 class="story-quote" id="cp-title" data-split>“Take away everything that is not delicious, and stop.”</h2>
+      <div class="principles">
+        <article data-reveal><h3 class="h3">Fire as a tool</h3><p>Oak, ember and iron give us a range of heat no stove can. We choose the flame the way a painter chooses a brush.</p></article>
+        <article data-reveal><h3 class="h3">Time as an ingredient</h3><p>Forty-day beef, seventy-two-hour dough, ten-day infusions. Patience is the one ingredient we can't buy.</p></article>
+        <article data-reveal><h3 class="h3">Restraint on the plate</h3><p>Three or four elements, each with a job. If something is only decoration, it leaves the dish.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ingredient selection -->
+  <section class="section story-ingredients" aria-labelledby="ing-title">
+    <div class="wrap grid-2">
+      <figure class="frame story-tall" data-clip data-art="ingredients" data-alt="Illustration of seasonal ingredients on a wooden board"></figure>
+      <div>
+        <p class="kicker" data-reveal>Ingredient Selection</p>
+        <h2 class="h1" id="ing-title" data-split>We write the menu after the deliveries arrive.</h2>
+        <p class="lede" data-reveal>Twelve small producers within a morning's drive supply most of what we cook. When their harvest changes, so does the carte.</p>
+        <ul class="producers" data-reveal>
+          <li><strong>Hollow Lane Farm</strong><span>Heirloom tomatoes &amp; leaves</span></li>
+          <li><strong>Riverside Dairy</strong><span>Butter, cream &amp; fresh cheese</span></li>
+          <li><strong>Greystone Beef</strong><span>Grass-fed, slow-grown cattle</span></li>
+          <li><strong>Mill House Bakery Flour</strong><span>Stone-ground heritage wheat</span></li>
+        </ul>
+        <p class="demo-note">Producer names are sample content.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our kitchen -->
+  <section class="story-kitchen" aria-labelledby="kit-title">
+    <figure class="frame story-kitchen__media" data-art="kitchen" data-alt="Illustration of the wood-fired hearth glowing with copper pans"></figure>
+    <div class="story-kitchen__text wrap">
+      <p class="kicker" data-reveal>Our Kitchen</p>
+      <h2 class="h1" id="kit-title" data-split>An open hearth at the heart of the room.</h2>
+      <p class="lede" data-reveal>Our kitchen has no doors. From any seat you can watch the oak burn down to ember, the copper pans move and every plate being finished at the pass.</p>
+    </div>
+  </section>
+
+  <!-- Our chef -->
+  <section class="section story-chef" aria-labelledby="chef-title">
+    <div class="wrap grid-2">
+      <div>
+        <p class="kicker" data-reveal>Our Chef</p>
+        <h2 class="h1" id="chef-title" data-split>Elena Marchetti</h2>
+        <p class="lede" data-reveal>Raised between Bologna and the Atlantic coast, Elena trained in wood-fired kitchens across northern Spain before joining Savora as sous chef in 2012. She has led the kitchen since 2016.</p>
+        <p class="muted" data-reveal>Her cooking is direct and generous: perfect produce, a precise fire and the confidence to leave a plate alone. The forty-day ribeye was her first dish here; the dark chocolate entremet is her favourite.</p>
+        <p class="demo-note" data-reveal>Fictional chef profile for this demonstration website.</p>
+      </div>
+      <figure class="frame story-tall" data-clip data-art="chef" data-alt="Illustration of a chef's tweezers finishing a plate"></figure>
+    </div>
+  </section>
+
+  <!-- Our craft -->
+  <section class="section story-craft" aria-labelledby="craft-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker" data-reveal>Our Craft</p>
+          <h2 class="h1" id="craft-title" data-split>Three dishes, three disciplines.</h2>
+        </div>
+        <p data-reveal>Each render below is the same 3D model you can turn on its dish page.</p>
+      </div>
+      <div class="craft-grid" id="craft-grid"></div>
+    </div>
+  </section>
+
+  <!-- Atmosphere -->
+  <section class="section story-atmos" aria-labelledby="sa-title">
+    <div class="wrap atmos-grid">
+      <figure class="frame atmos-a" data-clip data-art="cellar" data-alt="Illustration of the wine cellar"></figure>
+      <figure class="frame atmos-b" data-clip data-art="private" data-alt="Illustration of the private dining room"></figure>
+      <div class="atmos-text">
+        <p class="kicker" data-reveal>Restaurant Atmosphere</p>
+        <h2 class="h1" id="sa-title" data-split>Low light, warm oak, quiet music.</h2>
+        <p class="lede" data-reveal>We designed the room for conversation first. Tables are spaced generously, the lamps are dimmed by hand as the evening goes on, and the cellar is always open to look around.</p>
+        <a class="btn btn--solid" href="experience.html" data-reveal>Explore the experience <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="layout-bottom"></div>
+</body>
+</html>

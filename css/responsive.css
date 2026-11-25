@@ -1,0 +1,100 @@
+/* ---------------- Responsive layer (loaded last on every page) ---------------- */
+
+/* Large desktop */
+@media (min-width: 1700px) {
+  :root { --max: 1480px; --fs-body: 1.125rem; }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .nav-links { gap: 1.4rem; }
+  .guest__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .guest__item:nth-child(2) { border-right: 0; }
+  .guest__item:nth-child(3) { padding-left: 0; }
+  .guest__item:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+
+/* Tablet landscape — switch to mobile navigation */
+@media (max-width: 1024px) {
+  :root { --header-h: 72px; }
+  .nav-links, .nav-reserve { display: none; }
+  .burger-btn { display: block; }
+  .showcase__grid { grid-template-columns: minmax(0, 1fr); }
+  .chefs__grid { grid-template-columns: minmax(0, 1fr); }
+  .chefs__intro { position: static; }
+  .chefs__preview { display: none; }
+  .dialog__inner { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Tablet portrait */
+@media (max-width: 900px) {
+  .grid-2 { grid-template-columns: minmax(0, 1fr); }
+  .dish-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .signature-dishes .dish-grid .dish-card:nth-child(2) { margin-top: 0; }
+  .hero__media { inset: 32% -20% 0 -20%; }
+  .hero__shade { background: linear-gradient(180deg, rgba(13,11,9,.9) 0%, rgba(13,11,9,.6) 38%, rgba(13,11,9,0) 62%), linear-gradient(0deg, rgba(13,11,9,.85), rgba(13,11,9,0) 30%); }
+  .hero__content { align-self: start; }
+  .prep__track { flex-direction: column; width: auto; }
+  .prep__card { width: 100%; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
+  .prep__pin { padding-block: 5rem; }
+  .sig-captions { width: auto; left: var(--gutter); right: var(--gutter); top: auto; bottom: 5.5rem; translate: none; }
+  .sig-caption { top: auto; bottom: 0; translate: none; background: rgba(13,11,9,.72); padding: 1rem 1.2rem; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .sig-caption h3 { font-size: 1.8rem; }
+  .sig-intro { top: calc(var(--header-h) + 1.5rem); translate: none; right: var(--gutter); }
+  .sig-final { bottom: 4.5rem; right: var(--gutter); }
+  .sig-view-label { top: calc(var(--header-h) + 3.4rem); bottom: auto; }
+  .signature.is-static .sig-stage { grid-template-columns: minmax(0, 1fr); }
+  .signature.is-static .sig-canvas { aspect-ratio: 1; max-height: 70vh; }
+  .atmos__text { margin-left: var(--gutter); margin-right: var(--gutter); }
+  .form-row { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  :root { --fs-body: 1rem; }
+  .section { padding-block: 4.5rem; }
+  .footer-top { grid-template-columns: minmax(0, 1fr); gap: 2.4rem; }
+  .dish-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero { min-height: 0; grid-template-rows: auto; }
+  .hero__content { order: 1; padding-bottom: 0; }
+  .hero__media { order: 2; position: relative; inset: auto; height: 50svh; min-height: 340px; margin: -2rem -30% -1rem; }
+  .hero__meta { order: 3; }
+  .hero__shade { background: linear-gradient(180deg, rgba(13,11,9,.85) 0%, rgba(13,11,9,0) 45%), linear-gradient(0deg, rgba(13,11,9,.9), rgba(13,11,9,0) 20%); }
+  .hero__actions .btn { flex: 1 1 calc(50% - .5rem); padding: 0 .8rem; letter-spacing: .1em; }
+  .hero__meta .badge-3d { font-size: .625rem; }
+  .philo-cols { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .philo-cols div { display: flex; gap: 1rem; align-items: baseline; }
+  .philo-media { padding-bottom: 0; }
+  .philo-frame { width: 100%; }
+  .philo-frame--small { display: none; }
+  .prep__card { grid-template-columns: minmax(0, 1fr); }
+  .guest__grid { grid-template-columns: minmax(0, 1fr); }
+  .guest__item, .guest__item + .guest__item { padding: 2rem 0; border-right: 0; border-top: 1px solid var(--line); }
+  .guest__item:first-child { border-top: 0; }
+  .showcase__controls { flex-direction: column; align-items: stretch; }
+  .seg { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .seg button { padding: 0 .3rem; min-width: 0; }
+  .showcase__tools { justify-content: space-between; }
+  .showcase__viewer { aspect-ratio: 1; }
+  .sig-intro .h1, .sig-final .h1 { font-size: 2.4rem; }
+  .sig-caption p { font-size: .9rem; }
+  .sig-tag { display: none; }
+  .t-card { min-height: 280px; }
+  .btn { padding: 0 1.2rem; }
+  .notice dl { grid-template-columns: minmax(0, 1fr); }
+  .notice dt { margin-top: .4rem; }
+  .footer-bottom { flex-direction: column; }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  :root { --gutter: 16px; }
+  .logo { font-size: 1.4rem; letter-spacing: .26em; }
+  .tabs button { padding: 0 .8rem; }
+}
+
+/* Touch devices: no hover-only affordances */
+@media (hover: none) {
+  .dish-card:hover .frame img { transform: none; }
+}

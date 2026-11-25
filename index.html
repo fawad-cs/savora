@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAVORA — Taste the Extraordinary</title>
+<meta name="description" content="Savora — more than food, it's an experience. A fire-led restaurant with a signature dry-aged menu, chef's table and private dining.">
+<meta name="theme-color" content="#0d0b09">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0b09'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-size='38' text-anchor='middle' fill='%23d4b47c'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Manrope:wght@300..700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script type="module" src="js/home.js"></script>
+</head>
+<body data-page="home">
+<div class="loader" aria-hidden="true">
+  <div>
+    <div class="loader__word"><span>S</span><span>A</span><span>V</span><span>O</span><span>R</span><span>A</span></div>
+    <div class="loader__line"><i></i></div>
+    <p class="loader__note">Preparing the dining room</p>
+  </div>
+</div>
+<div id="layout-top"></div>
+
+<main id="main">
+  <!-- ============ HERO ============ -->
+  <section class="hero" data-hero aria-labelledby="hero-title">
+    <div class="hero__media" id="hero-media" aria-hidden="true">
+      <div class="viewer-loading"><div class="spinner"></div></div>
+    </div>
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="hero__content wrap">
+      <p class="kicker hero-pre">More than food. It's an experience.</p>
+      <h1 class="display hero__title" id="hero-title">
+        <span class="split-line"><span>Taste the</span></span>
+        <span class="split-line"><span><em>extraordinary.</em></span></span>
+      </h1>
+      <p class="lede hero-post">A fire-led kitchen where forty-day dry-aged beef, hand-rolled pasta and a patient pastry room meet in one intimate dining room.</p>
+      <div class="hero__actions hero-post">
+        <a class="btn btn--solid" href="menu.html">Explore Menu <i data-lucide="arrow-right"></i></a>
+        <a class="btn" href="reservations.html">Reserve a Table</a>
+      </div>
+    </div>
+    <div class="hero__meta wrap hero-post">
+      <span class="badge-3d">Real-time 3D · Forty-day ribeye</span>
+      <a class="scroll-cue" href="#signature" aria-label="Scroll to the signature burger experience"><span>Scroll</span><i></i></a>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track"><span>Dry-aged in-house</span><span>Wood-fired</span><span>Hand-rolled pasta</span><span>Chef's table</span><span>Natural wines</span><span>Dry-aged in-house</span><span>Wood-fired</span><span>Hand-rolled pasta</span><span>Chef's table</span></div>
+  </div>
+
+  <!-- ============ SIGNATURE BURGER FILM ============ -->
+  <section class="signature" id="signature" aria-labelledby="sig-title">
+    <div class="sig-stage">
+      <div class="sig-canvas" aria-hidden="true">
+        <div class="viewer-loading"><div class="spinner"></div><span>Assembling the signature</span></div>
+      </div>
+      <div class="sig-intro">
+        <p class="kicker">The Signature Experience</p>
+        <h2 class="h1" id="sig-title">Six layers.<br><em>One perfect bite.</em></h2>
+        <p class="muted">Keep scrolling — you are directing the film.</p>
+      </div>
+      <ol class="sig-captions" aria-label="The six layers of the Savora Signature burger">
+        <li class="sig-caption"><span class="sig-caption__k">The crown</span><h3>Sesame brioche</h3><p>Baked each morning with cultured butter, glazed twice, crowned with toasted sesame.</p></li>
+        <li class="sig-caption"><span class="sig-caption__k">Freshness</span><h3>Butter lettuce</h3><p>Ice-crisp leaves add snap and cool the richness below.</p></li>
+        <li class="sig-caption"><span class="sig-caption__k">Acidity</span><h3>Heirloom tomato</h3><p>Sliced to order, seasoned with flaked salt, never refrigerated.</p></li>
+        <li class="sig-caption"><span class="sig-caption__k">Richness</span><h3>Aged cheddar</h3><p>Eighteen-month cheddar, melted under a cloche until it drapes.</p></li>
+        <li class="sig-caption"><span class="sig-caption__k">Depth</span><h3>Dry-aged beef</h3><p>A coarse-ground blend aged in our salt chamber, seared hard on cast iron.</p></li>
+        <li class="sig-caption"><span class="sig-caption__k">Structure</span><h3>Toasted base</h3><p>A buttered, griddled heel that holds every layer until the final bite.</p></li>
+      </ol>
+      <p class="sig-view-label" aria-live="polite"></p>
+      <div class="sig-final">
+        <p class="kicker">Signature · $24</p>
+        <h2 class="h1">The Savora<br><em>Signature.</em></h2>
+        <div class="sig-final__actions">
+          <a class="btn btn--solid" href="dish.html#signature-burger">View the dish <i data-lucide="arrow-right"></i></a>
+          <a class="link-arrow" href="menu.html">Full menu <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="sig-progress" aria-hidden="true"><i></i></div>
+      <span class="frame-tag sig-tag">Real-time 3D model · procedural geometry</span>
+    </div>
+  </section>
+
+  <!-- ============ PHILOSOPHY ============ -->
+  <section class="section philosophy" aria-labelledby="philo-title">
+    <div class="wrap grid-2">
+      <div>
+        <p class="kicker" data-reveal>Our Philosophy</p>
+        <h2 class="h1" id="philo-title" data-split>Fire, time and restraint.</h2>
+        <p class="lede" data-reveal>We cook over oak, age our own beef and bake every morning. Then we take things away until only what matters is left on the plate.</p>
+        <div class="philo-cols" data-reveal>
+          <div><strong class="h3">40</strong><span>days of dry-ageing for every ribeye</span></div>
+          <div><strong class="h3">480°</strong><span>wood-oven heat for a ninety-second pizza</span></div>
+          <div><strong class="h3">42</strong><span>seats, and one sitting each evening</span></div>
+        </div>
+        <a class="link-arrow" href="story.html" data-reveal>Read our story <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="philo-media">
+        <figure class="frame philo-frame" data-clip data-art="ingredients" data-alt="Illustration of tomatoes, garlic, rosemary and sea salt on a wooden board"></figure>
+        <figure class="frame philo-frame--small" data-clip data-art="chef" data-alt="Illustration of tweezers placing a herb on a plated dish"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3D SHOWCASE ============ -->
+  <section class="section showcase" id="showcase" aria-labelledby="show-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker" data-reveal>3D Food Showcase</p>
+          <h2 class="h1" id="show-title" data-split>Turn the plate.</h2>
+        </div>
+        <p data-reveal>Drag to rotate, scroll or pinch to zoom, and separate the layers. Every dish here is a real-time 3D model built from geometry — not a rotating photograph.</p>
+      </div>
+      <div class="showcase__grid">
+        <div class="showcase__stage" data-reveal="fade">
+          <div class="showcase__viewer" id="showcase-viewer" tabindex="0" aria-label="Interactive 3D dish. Use the buttons below to change view, zoom or reveal layers.">
+            <div class="viewer-loading"><div class="spinner"></div><span>Loading 3D model</span></div>
+          </div>
+          <span class="frame-tag">Real-time 3D · drag to rotate</span>
+          <div class="showcase__controls" role="toolbar" aria-label="3D viewer controls">
+            <div class="seg" role="group" aria-label="Camera view">
+              <button type="button" data-view="front" aria-pressed="false">Front</button>
+              <button type="button" data-view="side" aria-pressed="false">Side</button>
+              <button type="button" data-view="top" aria-pressed="false">Top</button>
+              <button type="button" data-view="threeQuarter" aria-pressed="true">¾</button>
+              <button type="button" data-view="close" aria-pressed="false">Close</button>
+            </div>
+            <div class="showcase__tools">
+              <button class="icon-btn" type="button" data-action="zoom-out" aria-label="Zoom out"><i data-lucide="minus"></i></button>
+              <button class="icon-btn" type="button" data-action="zoom-in" aria-label="Zoom in"><i data-lucide="plus"></i></button>
+              <button class="icon-btn" type="button" data-action="layers" aria-pressed="false" aria-label="Reveal ingredient layers"><i data-lucide="layers"></i></button>
+              <button class="icon-btn" type="button" data-action="spin" aria-pressed="true" aria-label="Auto-rotate"><i data-lucide="rotate-3d"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="showcase__info">
+          <div class="tabs" role="tablist" aria-label="Featured dishes">
+            <button role="tab" type="button" aria-selected="true" data-dish="signature-burger">Burger</button>
+            <button role="tab" type="button" aria-selected="false" data-dish="diavola">Pizza</button>
+            <button role="tab" type="button" aria-selected="false" data-dish="chocolate-entremet">Dessert</button>
+            <button role="tab" type="button" aria-selected="false" data-dish="dry-aged-ribeye">Plated</button>
+          </div>
+          <div class="showcase__text" aria-live="polite">
+            <h3 class="h2" id="show-name">The Savora Signature</h3>
+            <p class="price showcase__price" id="show-price">$24</p>
+            <p class="muted" id="show-desc"></p>
+            <h4 class="layers-title">Layers</h4>
+            <ol class="layer-list" id="show-layers"></ol>
+            <a class="btn btn--gold" id="show-link" href="dish.html#signature-burger">View dish details <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIGNATURE DISHES ============ -->
+  <section class="section signature-dishes" aria-labelledby="sd-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker" data-reveal>Signature Dishes</p>
+          <h2 class="h1" id="sd-title" data-split>The plates we are known for.</h2>
+        </div>
+        <a class="link-arrow" href="menu.html" data-reveal>See the full menu <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="dish-grid" id="signature-grid"></div>
+      <p class="demo-note">Demonstration menu prices.</p>
+    </div>
+  </section>
+
+  <!-- ============ ART OF PREPARATION (horizontal) ============ -->
+  <section class="prep" aria-labelledby="prep-title">
+    <div class="prep__pin">
+      <div class="prep__head wrap">
+        <p class="kicker">The Art of Preparation</p>
+        <h2 class="h1" id="prep-title">From field<br>to <em>fire.</em></h2>
+      </div>
+      <div class="prep__track">
+        <article class="prep__card">
+          <figure class="frame" data-art="ingredients" data-alt="Illustration of raw ingredients on a board"></figure>
+          <div><span class="prep__k">Source</span><h3 class="h3">Ingredients first</h3><p>Twelve farms within a morning's drive. We write the menu after the deliveries arrive.</p></div>
+        </article>
+        <article class="prep__card">
+          <figure class="frame" data-art="cellar" data-alt="Illustration of the ageing chamber and cellar"></figure>
+          <div><span class="prep__k">Patience</span><h3 class="h3">The ageing room</h3><p>Beef rests forty days against Himalayan salt; doughs ferment for seventy-two hours.</p></div>
+        </article>
+        <article class="prep__card">
+          <figure class="frame" data-art="kitchen" data-alt="Illustration of the wood-fired hearth with copper pans"></figure>
+          <div><span class="prep__k">Fire</span><h3 class="h3">The oak hearth</h3><p>Everything that can meet a flame does. Heat is our oldest and most precise tool.</p></div>
+        </article>
+        <article class="prep__card">
+          <figure class="frame frame--render render-slot" data-render="dry-aged-ribeye" data-view="hero" aria-label="3D render of the dry-aged ribeye plate"><img alt="Sliced dry-aged ribeye with potato purée — real-time 3D render" loading="lazy"><div class="spinner"></div><span class="frame-tag">3D render</span></figure>
+          <div><span class="prep__k">Plate</span><h3 class="h3">Seconds at the pass</h3><p>Sliced, sauced and on its way while the crust still crackles.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHEF'S SELECTION ============ -->
+  <section class="section chefs" aria-labelledby="chef-title">
+    <div class="wrap chefs__grid">
+      <div class="chefs__intro">
+        <p class="kicker" data-reveal>Chef's Selection</p>
+        <h2 class="h1" id="chef-title" data-split>Chosen by Chef Elena Marchetti.</h2>
+        <p class="muted" data-reveal>Six dishes from tonight's carte that best show the kitchen's hand. Hover a dish to see it.</p>
+        <figure class="chefs__preview frame frame--render render-slot" id="chef-preview" aria-hidden="true"><img alt=""><div class="spinner"></div><span class="frame-tag">3D render</span></figure>
+      </div>
+      <ul class="chef-list" id="chef-list"></ul>
+    </div>
+  </section>
+
+  <!-- ============ ATMOSPHERE ============ -->
+  <section class="atmos" aria-labelledby="atmos-title">
+    <figure class="frame atmos__hero" data-art="dining" data-alt="Illustration of the Savora dining room at night with pendant lamps and arched windows"><div class="atmos__parallax"></div></figure>
+    <div class="atmos__text wrap">
+      <p class="kicker" data-reveal>Restaurant Atmosphere</p>
+      <h2 class="h1" id="atmos-title" data-split>A room lit like candlelight on dark oak.</h2>
+      <p class="lede" data-reveal>Forty-two seats beneath brass pendants and arched windows. Soft voices, low light, an open hearth glowing at the far end of the room.</p>
+      <a class="link-arrow" href="experience.html" data-reveal>Discover the experience <i data-lucide="arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ============ GUEST EXPERIENCE ============ -->
+  <section class="section guest" aria-labelledby="guest-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker" data-reveal>Guest Experience</p>
+          <h2 class="h1" id="guest-title" data-split>Every detail, considered.</h2>
+        </div>
+      </div>
+      <div class="guest__grid">
+        <article class="guest__item" data-reveal><i data-lucide="flame"></i><h3 class="h3">Open hearth</h3><p>Sit near the fire and watch your course leave the embers.</p></article>
+        <article class="guest__item" data-reveal><i data-lucide="wine"></i><h3 class="h3">A considered cellar</h3><p><span data-count="320">320</span> wines, with pairings chosen course by course.</p></article>
+        <article class="guest__item" data-reveal><i data-lucide="chef-hat"></i><h3 class="h3">Chef's table</h3><p>Eight seats at the pass for a seven-course tasting menu.</p></article>
+        <article class="guest__item" data-reveal><i data-lucide="sparkles"></i><h3 class="h3">Occasions</h3><p>Birthdays, proposals and private dinners planned with you.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials" aria-labelledby="t-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker" data-reveal>Guest Words</p>
+          <h2 class="h1" id="t-title" data-split>What our guests remember.</h2>
+        </div>
+        <div class="t-nav">
+          <button class="icon-btn" type="button" id="t-prev" aria-label="Previous review"><i data-lucide="arrow-left"></i></button>
+          <button class="icon-btn" type="button" id="t-next" aria-label="Next review"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="t-track" id="t-track" tabindex="0" aria-label="Guest reviews (sample content)">
+        <blockquote class="t-card"><p>“The burger arrived and the table went quiet. Then the chocolate entremet did it again.”</p><footer><strong>Amara K.</strong><span>Anniversary dinner</span></footer></blockquote>
+        <blockquote class="t-card"><p>“We sat at the chef's table and watched every plate leave the fire. Unhurried, warm, precise.”</p><footer><strong>Daniel R.</strong><span>Chef's table</span></footer></blockquote>
+        <blockquote class="t-card"><p>“The ribeye is the best I have had outside of Spain. The room feels like a secret.”</p><footer><strong>Sofia L.</strong><span>Friday evening</span></footer></blockquote>
+        <blockquote class="t-card"><p>“They planned a private dinner for twelve around my mother's favourite dishes. Faultless.”</p><footer><strong>James O.</strong><span>Private dining</span></footer></blockquote>
+      </div>
+      <p class="demo-note">Sample reviews written for this demonstration website.</p>
+    </div>
+  </section>
+
+  <!-- ============ RESERVATION CTA ============ -->
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="cta__glow" aria-hidden="true"></div>
+    <div class="wrap cta__inner">
+      <p class="kicker" data-reveal>Reservations</p>
+      <h2 class="display" id="cta-title" data-split>Your table is waiting.</h2>
+      <p class="lede" data-reveal>Tuesday to Sunday. Tables are released thirty days ahead; the chef's table seats eight.</p>
+      <div class="cta__actions" data-reveal>
+        <a class="btn btn--solid" href="reservations.html">Reserve a Table <i data-lucide="arrow-right"></i></a>
+        <a class="btn" href="experience.html">Private dining</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="layout-bottom"></div>
+</body>
+</html>

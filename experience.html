@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experience — SAVORA</title>
+<meta name="description" content="Dining at Savora: the dining room, private dining in the Oak Room, special occasions and the chef's table.">
+<meta name="theme-color" content="#0d0b09">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0b09'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-size='38' text-anchor='middle' fill='%23d4b47c'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Manrope:wght@300..700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/experience.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script type="module" src="js/experience.js"></script>
+</head>
+<body data-page="experience">
+<div id="layout-top"></div>
+<main id="main">
+  <section class="page-hero" data-page-hero aria-labelledby="exp-title">
+    <div class="wrap">
+      <div class="page-hero__grid">
+        <div>
+          <p class="kicker" data-hero-pre>The Experience</p>
+          <h1 class="display" id="exp-title" data-hero-title>An evening, not a meal.</h1>
+        </div>
+        <p class="lede" data-hero-post>From the first aperitivo by the hearth to the last espresso in the cellar, every part of a Savora evening is designed to be unhurried.</p>
+      </div>
+      <figure class="frame page-hero__media" data-hero-media data-art="counter" data-alt="Illustration of the chef's counter with heat lamps and plates on the pass"></figure>
+    </div>
+  </section>
+
+  <!-- Dining atmosphere -->
+  <section class="section" aria-labelledby="da-title">
+    <div class="wrap grid-2">
+      <div>
+        <p class="kicker" data-reveal>Dining Atmosphere</p>
+        <h2 class="h1" id="da-title" data-split>Forty-two seats. One sitting.</h2>
+        <p class="lede" data-reveal>We seat each table once an evening, so it is yours for as long as you like. No turnover, no rush.</p>
+        <dl class="facts" data-reveal>
+          <div><dt>Seats</dt><dd><span data-count="42">42</span></dd></div>
+          <div><dt>Wines</dt><dd><span data-count="320">320</span></dd></div>
+          <div><dt>Courses (tasting)</dt><dd><span data-count="7">7</span></dd></div>
+        </dl>
+      </div>
+      <figure class="frame exp-tall" data-clip data-art="dining" data-alt="Illustration of the dining room at night"></figure>
+    </div>
+  </section>
+
+  <!-- Offerings -->
+  <section class="offers" aria-label="Ways to dine">
+    <article class="offer" id="private-dining">
+      <figure class="frame offer__media" data-art="private" data-alt="Illustration of the private dining room with a round table set for eight"></figure>
+      <div class="offer__text">
+        <p class="kicker">Private Dining</p>
+        <h2 class="h1">The Oak Room</h2>
+        <p class="lede">A private room for up to fourteen guests, with its own entrance and a menu planned with you in advance.</p>
+        <ul class="offer__list"><li><i data-lucide="users"></i>6 – 14 guests</li><li><i data-lucide="utensils"></i>Bespoke set or tasting menu</li><li><i data-lucide="wine"></i>Sommelier-led pairings</li></ul>
+        <a class="btn btn--gold" href="reservations.html#private">Enquire about the Oak Room <i data-lucide="arrow-right"></i></a>
+      </div>
+    </article>
+    <article class="offer offer--flip" id="occasions">
+      <figure class="frame offer__media" data-art="occasion" data-alt="Illustration of a champagne coupe tower"></figure>
+      <div class="offer__text">
+        <p class="kicker">Special Occasions</p>
+        <h2 class="h1">Moments, marked.</h2>
+        <p class="lede">Birthdays, anniversaries, proposals. Tell us what you are celebrating and we will take care of the details — a written menu, a dessert with a candle, the best table by the hearth.</p>
+        <ul class="offer__list"><li><i data-lucide="cake"></i>Celebration desserts</li><li><i data-lucide="pen-line"></i>Personalised printed menus</li><li><i data-lucide="flower-2"></i>Flowers arranged on request</li></ul>
+        <a class="btn btn--gold" href="reservations.html">Plan an occasion <i data-lucide="arrow-right"></i></a>
+      </div>
+    </article>
+    <article class="offer" id="chefs-table">
+      <figure class="frame offer__media" data-art="counter" data-alt="Illustration of the chef's table at the pass"></figure>
+      <div class="offer__text">
+        <p class="kicker">Chef's Table</p>
+        <h2 class="h1">Eight seats at the pass.</h2>
+        <p class="lede">A seven-course tasting menu served by the chefs who cook it, Thursday to Saturday at 19:00.</p>
+        <ol class="courses">
+          <li><span>Snacks from the embers</span></li>
+          <li><span>Burrata, heirloom tomato</span></li>
+          <li><span>Charred octopus</span></li>
+          <li><span>Lobster tagliolini</span></li>
+          <li><span>Forty-day ribeye</span></li>
+          <li><span>Yuzu meringue tart</span></li>
+          <li><span>Dark chocolate entremet</span></li>
+        </ol>
+        <p class="price chef-price">$145 per guest · pairing $85</p>
+        <p class="demo-note">Demonstration prices.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- Interior gallery -->
+  <section class="section gallery" aria-labelledby="gal-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker" data-reveal>Interiors</p>
+          <h2 class="h1" id="gal-title" data-split>Inside Savora.</h2>
+        </div>
+        <div class="t-nav">
+          <button class="icon-btn" type="button" id="g-prev" aria-label="Previous image"><i data-lucide="arrow-left"></i></button>
+          <button class="icon-btn" type="button" id="g-next" aria-label="Next image"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="gallery__track" id="g-track" tabindex="0" aria-label="Interior illustrations">
+      <figure class="gallery__item"><div class="frame" data-art="dining" data-alt="The main dining room"></div><figcaption>The dining room</figcaption></figure>
+      <figure class="gallery__item"><div class="frame" data-art="kitchen" data-alt="The open hearth"></div><figcaption>The open hearth</figcaption></figure>
+      <figure class="gallery__item"><div class="frame" data-art="cellar" data-alt="The cellar"></div><figcaption>The cellar</figcaption></figure>
+      <figure class="gallery__item"><div class="frame" data-art="private" data-alt="The Oak Room"></div><figcaption>The Oak Room</figcaption></figure>
+      <figure class="gallery__item"><div class="frame" data-art="counter" data-alt="The chef's table"></div><figcaption>The chef's table</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Guest experience: the evening -->
+  <section class="section evening" aria-labelledby="ev-title">
+    <div class="wrap">
+      <p class="kicker" data-reveal>Guest Experience</p>
+      <h2 class="h1" id="ev-title" data-split>How an evening unfolds.</h2>
+      <ol class="evening__steps">
+        <li data-reveal><span class="evening__time">19:00</span><div><h3 class="h3">Arrival by the hearth</h3><p>A saffron spritz and something warm from the embers while your table is readied.</p></div></li>
+        <li data-reveal><span class="evening__time">19:30</span><div><h3 class="h3">The first courses</h3><p>Starters arrive in the order the kitchen thinks they are best, paced to the conversation.</p></div></li>
+        <li data-reveal><span class="evening__time">20:30</span><div><h3 class="h3">From the fire</h3><p>Mains are sliced at the pass and brought straight to you. Wine pairings poured at the table.</p></div></li>
+        <li data-reveal><span class="evening__time">21:45</span><div><h3 class="h3">The pastry room</h3><p>Dessert, then a single-origin espresso — and an open invitation to visit the cellar.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="ecta">
+    <div class="cta__glow" aria-hidden="true"></div>
+    <div class="wrap cta__inner">
+      <p class="kicker" data-reveal>Reservations</p>
+      <h2 class="display" id="ecta" data-split>Join us by the fire.</h2>
+      <div class="cta__actions" data-reveal>
+        <a class="btn btn--solid" href="reservations.html">Reserve a Table <i data-lucide="arrow-right"></i></a>
+        <a class="btn" href="contact.html">Ask a question</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="layout-bottom"></div>
+</body>
+</html>

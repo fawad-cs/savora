@@ -1,0 +1,34 @@
+/* ---------------- DISH DETAIL ---------------- */
+.dish-page { padding-top: calc(var(--header-h) + 2.5rem); }
+.dish-page[hidden] { display: none; }
+.dish-hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.dish-stage { position: relative; border: 1px solid var(--line); background: radial-gradient(80% 70% at 50% 45%, #2e241c 0%, #15110e 70%); }
+.dish-viewer { position: relative; aspect-ratio: 1 / 0.86; cursor: grab; }
+.dish-viewer:active { cursor: grabbing; }
+.dish-viewer canvas { width: 100%; height: 100%; display: block; }
+.dish-stage > .frame-tag { top: 12px; bottom: auto; }
+.dish-stage__controls { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 1rem; border-top: 1px solid var(--line); }
+.dish-stage__tools { display: flex; gap: .5rem; }
+.dish-info .h1 { margin-bottom: .6rem; }
+.dish-price { font-size: 2rem; color: var(--gold-2); margin: 0 0 1.4rem; }
+.dish-info .lede { margin-bottom: 1.6rem; }
+.dish-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin: 2.2rem 0 1rem; }
+.dish-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(2rem, 6vw, 7rem); border-top: 1px solid var(--line); margin-top: clamp(3rem, 6vw, 5rem); }
+.dish-sub { margin: 0 0 1.4rem; color: var(--gold-2); font-style: italic; }
+.ing-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1.5rem; }
+.ing-list li { display: flex; align-items: center; gap: .7rem; padding: .9rem 0; border-bottom: 1px solid var(--line); }
+.ing-list svg { width: 16px; height: 16px; color: var(--ember-2); flex: none; }
+.dish-story { margin: 0 0 2.6rem; font: italic 400 clamp(1.4rem, 2.3vw, 2rem)/1.35 var(--serif); color: var(--ivory); border-left: 1px solid var(--gold); padding-left: 1.6rem; }
+.model-layers { margin: 0; padding-left: 1.2rem; color: var(--cream); display: grid; gap: .4rem; }
+.model-layers li::marker { color: var(--gold-2); font-family: var(--serif); }
+.dish-missing { padding-top: calc(var(--header-h) + 6rem); display: grid; gap: 1.4rem; justify-items: start; }
+.related { background: var(--char); }
+@media (max-width: 1024px) { .dish-hero { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 760px) { .dish-detail { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 600px) {
+  .ing-list { grid-template-columns: minmax(0, 1fr); }
+  .dish-stage__controls { flex-direction: column; align-items: stretch; }
+  .seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .seg button { min-width: 0; padding: 0 .3rem; }
+  .dish-viewer { aspect-ratio: 1; }
+}
